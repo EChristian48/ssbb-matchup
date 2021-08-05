@@ -46,7 +46,6 @@
 import Vue from 'vue'
 import { Fighter, fighters } from '@/data/fighters'
 import matchupsChart from '@/data/matchups'
-import Title from '~/components/Title.vue'
 
 type IndexPageType = {
   fighters: Fighter[]
@@ -55,7 +54,6 @@ type IndexPageType = {
 }
 
 export default Vue.extend({
-  components: { Title },
   name: 'IndexPage',
   layout: 'smash',
   data(): IndexPageType {
