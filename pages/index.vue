@@ -6,13 +6,18 @@
         :key="index"
         no-gutters
         class="highlighted-fighters-group"
-        :class="{ 'is-active': index === highlightedFightersRotation }"
+        :class="[
+          { 'is-active': index === highlightedFightersRotation },
+          { 'is-out': isNext(index) }
+        ]"
       >
         <v-img
           v-for="fighter in fightersGroup"
           :key="fighter.id"
-          max-width="80"
           :src="fighter.imgUrl"
+          height="150px"
+          max-width="50px"
+          class="highlighted-fighter"
         ></v-img>
       </div>
     </div>
@@ -116,6 +121,12 @@ export default Vue.extend({
       if (this.fighter1 && this.fighter2) {
         alert(matchupsChart.get(this.fighter1.id)?.get(this.fighter2.id))
       }
+    },
+    isNext(index: number): boolean {
+      if (index === 3 && this.highlightedFightersRotation === 0) {
+        return true
+      }
+      return index === this.highlightedFightersRotation - 1
     }
   }
 })
@@ -124,14 +135,14 @@ export default Vue.extend({
 <style scoped>
 .highlighted-fighters {
   position: relative;
-  background-color: red;
+  width: 100%;
 }
 
 .highlighted-fighters-group {
   position: absolute;
   z-index: -10;
   transition: width 2.15s cubic-bezier(0.77, 0, 0.175, 1);
-  width: 0px;
+  width: 0;
   overflow: hidden;
   display: flex;
 }
@@ -150,9 +161,13 @@ export default Vue.extend({
 
 .is-out {
   transition: width 2.15s cubic-bezier(0.77, 0, 0.175, 1);
-  transform-origin: 50% 50%;
-  transform: skewX(-12.3deg);
   width: 100%;
   z-index: 3;
+}
+
+.highlighted-fighter {
+  border-right-style: solid;
+  border-right-color: black;
+  border-right-width: 3px;
 }
 </style>
