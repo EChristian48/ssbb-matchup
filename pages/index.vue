@@ -34,6 +34,7 @@
                 :src="fighter2 ? fighter2.imgUrl : ''"
                 class="mb-2"
                 height="200"
+                transition="scroll-x-transition"
               >
                 <template #placeholder>
                   <SelectPlaceholder player-number="2" />
