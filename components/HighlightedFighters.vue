@@ -46,6 +46,7 @@ function getHighlightedFighters(rotation: number, size: number) {
 type HighlightedFightersData = {
   highlightedFighters: Fighter[][]
   highlightedFightersRotation: number
+  intervalId: NodeJS.Timer | undefined
 }
 
 export default Vue.extend({
@@ -54,16 +55,20 @@ export default Vue.extend({
       highlightedFighters: [...Array(4)].map((_, index) =>
         getHighlightedFighters(index + 1, HIGHLIGHTED_FIGHTERS_COUNT)
       ),
-      highlightedFightersRotation: 0
+      highlightedFightersRotation: 0,
+      intervalId: undefined
     }
   },
   created() {
-    setInterval(() => {
+    this.intervalId = setInterval(() => {
       this.highlightedFightersRotation =
         this.highlightedFightersRotation < 3
           ? this.highlightedFightersRotation + 1
           : 0
     }, 5000)
+  },
+  beforeDestroy() {
+    if (this.intervalId) clearInterval(this.intervalId)
   },
   methods: {
     isNext(index: number): boolean {
