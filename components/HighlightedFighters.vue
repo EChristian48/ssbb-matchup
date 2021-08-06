@@ -60,12 +60,14 @@ export default Vue.extend({
     }
   },
   created() {
-    this.intervalId = setInterval(() => {
-      this.highlightedFightersRotation =
-        this.highlightedFightersRotation < 3
-          ? this.highlightedFightersRotation + 1
-          : 0
-    }, 5000)
+    if (process.client) {
+      this.intervalId = setInterval(() => {
+        this.highlightedFightersRotation =
+          this.highlightedFightersRotation < 3
+            ? this.highlightedFightersRotation + 1
+            : 0
+      }, 5000)
+    }
   },
   beforeDestroy() {
     if (this.intervalId) clearInterval(this.intervalId)
