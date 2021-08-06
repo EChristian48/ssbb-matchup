@@ -3,11 +3,12 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: 'false',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - ssbb-matchup',
-    title: 'ssbb-matchup',
+    titleTemplate: '%s - Super Smash Bros. Tools',
+    title: 'Super Smash Bros. Tools',
     htmlAttrs: {
       lang: 'en'
     },
