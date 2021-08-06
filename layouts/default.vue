@@ -1,23 +1,11 @@
 <template>
   <v-app dark>
     <v-app-bar fixed app>
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title v-text="'Super Smash Bros. Tools'" />
     </v-app-bar>
     <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  data() {
-    return {
-      title: 'Super Smash Bros. Brawl Matchup'
-    }
-  }
-})
-</script>

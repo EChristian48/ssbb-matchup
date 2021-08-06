@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mt-2">
+  <v-card class="mt-3 mt-sm-10 mt-md-16 py-2 px-2 px-sm-4">
     <h1 class="title1">SUPER SMASH BROS.</h1>
     <h1 class="title2">BRAWL</h1>
     <h1 class="title3">MATCHUP</h1>

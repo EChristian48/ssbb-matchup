@@ -14,8 +14,6 @@
         v-for="fighter in fightersGroup"
         :key="fighter.id"
         :src="fighter.imgUrl"
-        height="150px"
-        max-width="50px"
         class="highlighted-fighter"
       >
         <template #placeholder>
@@ -96,18 +94,14 @@ export default Vue.extend({
   width: 0;
   overflow: hidden;
   display: flex;
+  justify-content: center;
 }
 
 .is-active {
-  z-index: 10;
+  z-index: -1;
   transition: width 2.15s cubic-bezier(0.77, 0, 0.175, 1);
   width: 100%;
-}
-
-.neutral {
-  overflow: hidden;
-  width: 390px;
-  transition: width 2.15s cubic-bezier(0.77, 0, 0.175, 1);
+  justify-content: center;
 }
 
 .is-out {
@@ -120,5 +114,21 @@ export default Vue.extend({
   border-right-style: solid;
   border-right-color: black;
   border-right-width: 3px;
+  height: 150px;
+  max-width: 60px;
+}
+
+@media screen and (min-width: 600px) {
+  .highlighted-fighter {
+    height: 175px;
+    max-width: 100px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .highlighted-fighter {
+    height: 200px;
+    max-width: 150px;
+  }
 }
 </style>

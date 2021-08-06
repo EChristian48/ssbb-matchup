@@ -14,10 +14,10 @@ export function toResult(type: MatchupTypes) {
   const determinator = type[0]
   switch (determinator) {
     case '-':
-      return 'Lose'
+      return 'Player 1 Loses.'
     case '+':
-      return 'Win'
+      return 'Player 1 Wins!'
     default:
-      return 'Even'
+      return 'This is an even matchup'
   }
 }
