@@ -96,7 +96,7 @@ export default Vue.extend({
 
 .highlighted-fighters-group {
   position: absolute;
-  z-index: -10;
+  z-index: -100;
   transition: width 2.15s cubic-bezier(0.77, 0, 0.175, 1);
   width: 0;
   overflow: hidden;
@@ -105,7 +105,7 @@ export default Vue.extend({
 }
 
 .is-active {
-  z-index: -1;
+  z-index: 3;
   transition: width 2.15s cubic-bezier(0.77, 0, 0.175, 1);
   width: 100%;
   justify-content: center;
