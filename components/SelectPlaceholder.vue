@@ -21,8 +21,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-
 .fighter-placeholder {
   background-color: #fe3333;
   height: 100%;

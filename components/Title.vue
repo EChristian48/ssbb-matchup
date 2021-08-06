@@ -7,8 +7,6 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
-
 .title1,
 .title2,
 .title3 {
