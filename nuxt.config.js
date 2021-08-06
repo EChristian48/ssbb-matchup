@@ -22,7 +22,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/styles/fonts'],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/fragment.client.ts'],
@@ -36,10 +36,22 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify'
+    // https://google-fonts.nuxtjs.org
+    // '@nuxtjs/google-fonts'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
+
+  // Google fonts config: https://google-fonts.nuxtjs.org/options
+  googleFonts: {
+    families: {
+      Roboto: true,
+      'Roboto+Condensed': [700]
+    },
+    display: 'swap',
+    preconnect: true
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
