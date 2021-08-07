@@ -41,7 +41,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxt/content'],
 
   // Google fonts config: https://google-fonts.nuxtjs.org/options
   // googleFonts: {
