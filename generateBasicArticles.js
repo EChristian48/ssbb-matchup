@@ -211,8 +211,9 @@ fighters.forEach((fighter) => {
   fs.writeFileSync(
     path.join(contentDir, fileName),
     `---
-  imageUrl: ${fighter.imgUrl}
-  id: ${fighter.id}
+title: ${fighter.name}
+imageUrl: ${fighter.imgUrl}
+id: ${fighter.id}
 ---
 
 # ${fighter.name}
