@@ -59,9 +59,11 @@
 
     <v-row>
       <v-col>
-        <v-card v-if="result" class="pb-2">
+        <v-card v-if="result" id="result" class="pb-2">
           <h1 class="text-center text-uppercase result-score">{{ result }}</h1>
-          <h2 class="text-center text-uppercase result-text">Player 1 Wins!</h2>
+          <h2 class="text-center text-uppercase result-text">
+            {{ resultText }}
+          </h2>
         </v-card>
       </v-col>
     </v-row>
@@ -95,6 +97,14 @@ export default Vue.extend({
     resultText(): string {
       if (this.result) return toResult(this.result)
       return `Can't get result`
+    }
+  },
+  watch: {
+    async result(newResult) {
+      if (newResult) {
+        await this.$nextTick()
+        document.querySelector('#result')?.scrollIntoView()
+      }
     }
   },
   methods: {
