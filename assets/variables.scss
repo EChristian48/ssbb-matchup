@@ -2,4 +2,9 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+
+// This is for production build
+// Somehow global css doesn't work
+// But this one does
+// Global css for dev: './css/global.css'
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');

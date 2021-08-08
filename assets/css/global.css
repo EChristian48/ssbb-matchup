@@ -1,3 +1,10 @@
+/*
+This one is for dev build
+idk man, i need to solve this issue
+the one for prod: '../variables.scss'
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
