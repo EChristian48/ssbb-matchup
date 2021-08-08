@@ -34,9 +34,6 @@ export default Vue.extend({
   },
   data(): FighterData {
     return {} as FighterData
-  },
-  created() {
-    console.log(this.fighterDocument)
   }
 })
 </script>
