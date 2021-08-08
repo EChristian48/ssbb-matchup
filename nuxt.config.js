@@ -12,6 +12,9 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
+    headAttrs: {
+      prefix: 'og: https://ogp.me/ns/website'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,9 +22,29 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Tools for Super Smash Bros. Mostly matchup tools where you can see you character matchups. Created to learn Vue and Nuxt.'
+          'Tools for Super Smash Bros. Mostly matchup tools where you can see you character matchups with more coming soon!. Created to learn Vue and Nuxt.'
       },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+
+      // OpenGraph
+      { hid: 'og:title', name: 'og:title', content: 'Super Smash Tools' },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://smashtools.netlify.app'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://smashtools.netlify.app/logo.svg'
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content:
+          'Tools for Super Smash Bros. Mostly matchup tools where you can see you character matchups with more coming soon!. Created to learn Vue and Nuxt.'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
