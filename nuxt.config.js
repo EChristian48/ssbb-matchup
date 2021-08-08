@@ -7,15 +7,20 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Super Smash Bros. Tools',
-    title: 'Super Smash Bros. Tools',
+    titleTemplate: '%s - Super Smash Tools',
+    title: 'Super Smash Tools',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Tools for Super Smash Bros. Mostly matchup tools where you can see you character matchups. Created to learn Vue and Nuxt.'
+      },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
