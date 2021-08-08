@@ -17,4 +17,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Image URL', name: 'imageUrl', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
+        comment: 'You can also use Vuetify components'
