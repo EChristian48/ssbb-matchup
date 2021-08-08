@@ -35,6 +35,7 @@ export default {
         content: 'https://smashtools.netlify.app'
       },
       {
+        hid: 'og:image',
         name: 'og:image',
         content: 'https://smashtools.netlify.app/logo.svg'
       },
@@ -43,6 +44,39 @@ export default {
         name: 'og:description',
         content:
           'Tools for Super Smash Bros. Mostly matchup tools where you can see you character matchups with more coming soon!. Created to learn Vue and Nuxt.'
+      },
+
+      // Twitter
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@erickch_'
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Super Smash Tools'
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          'Tools for Super Smash Bros. Mostly matchup tools where you can see you character matchups with more coming soon!. Created to learn Vue and Nuxt.'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://smashtools.netlify.app/logo.svg'
+      },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://smashtools.netlify.app'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
