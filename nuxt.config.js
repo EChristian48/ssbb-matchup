@@ -35,7 +35,6 @@ export default {
         content: 'https://smashtools.netlify.app'
       },
       {
-        hid: 'og:image',
         name: 'og:image',
         content: 'https://smashtools.netlify.app/logo.svg'
       },
