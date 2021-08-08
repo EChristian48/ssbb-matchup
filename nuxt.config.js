@@ -37,7 +37,12 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: 'https://smashtools.netlify.app/logo.svg'
+        content: 'https://smashtools.netlify.app/logo.webp'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://smashtools.netlify.app/logo.jpg'
       },
       {
         hid: 'og:description',
@@ -71,7 +76,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://smashtools.netlify.app/logo.svg'
+        content: 'https://smashtools.netlify.app/logo.webp'
       },
       {
         hid: 'twitter:url',
